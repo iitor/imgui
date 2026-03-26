@@ -3,11 +3,11 @@ project "ImGui"
     language "C++"
     staticruntime "on"
     
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	files
-	{
+    files
+    {
         "imconfig.h",
         "imgui.h",
         "imgui.cpp",
@@ -20,15 +20,15 @@ project "ImGui"
         "imgui_demo.cpp"
     }
     
-	filter "system:windows"
+    filter "system:windows"
         systemversion "latest"
         cppdialect "C++17"
 
-	filter "configurations:Debug"
-		symbols "on"
+    filter "configurations:Debug"
+        symbols "on"
 
-	filter "configurations:Release"
-		optimize "on"
+    filter "configurations:Release"
+        optimize "on"
 
-	filter "configurations:Dist"
-		optimize "on"
+    filter "configurations:Dist"
+        optimize "on"
